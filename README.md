@@ -32,7 +32,7 @@ The idea is a tool that helps a university research department keep grant spendi
 
 ## Use case diagram
 
-![Use case diagram for the Faculty Research Grant & Publication Tracker](UML_UseCase.png)
+![Use case diagram for the Faculty Research Grant & Publication Tracker](Lab1/UML_UseCase.png)
 
 ## Use cases
 
