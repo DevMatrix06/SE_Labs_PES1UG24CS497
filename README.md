@@ -56,7 +56,3 @@ Two relationships worth calling out since they're easy to miss just glancing at 
 ## Requirements summary
 
 Five functional requirements (FR-001 to FR-005) cover expense tracking, publication submission with citation fetch, co-author approvals, Dean approval for overdrafts, and burn-up reporting. Two non-functional requirements (NFR-001, NFR-002) cover audit-log immutability and dashboard load time (under 3 seconds for up to 20 active grants). Full details, acceptance criteria, and rationale are in the xlsx.
-
-## Notes
-
-This was built as a lab exercise, so it's requirements + diagram only — no actual implementation yet. If later labs build on this (design docs, code, etc.) I'll add them here as separate folders.
