@@ -2,7 +2,7 @@
 
 **PES1UG24CS497**
 
-This repo holds my Lab 1 submission for Software Engineering — requirements gathering and a UML use-case diagram for a system I designed called the **Faculty Research Grant & Publication Tracker**.
+This repo holds my Lab 1&2 submission for Software Engineering — requirements gathering and a UML use-case diagram for a system I designed called the **Faculty Research Grant & Publication Tracker** and Burndown Chart using Jira.
 
 ## What the system is about
 
@@ -56,3 +56,7 @@ Two relationships worth calling out since they're easy to miss just glancing at 
 ## Requirements summary
 
 Five functional requirements (FR-001 to FR-005) cover expense tracking, publication submission with citation fetch, co-author approvals, Dean approval for overdrafts, and burn-up reporting. Two non-functional requirements (NFR-001, NFR-002) cover audit-log immutability and dashboard load time (under 3 seconds for up to 20 active grants). Full details, acceptance criteria, and rationale are in the xlsx.
+
+
+**Lab 2: Jira**
+This lab demonstrates Agile Scrum practices using Jira for a "Faculty Research Grant & Publication Tracker" project. It covers creating a product backlog with 6 user stories organized under three epics (Grant Expense & Budget Management, Publication & Citation Tracking, and Co-Author Collaboration & Fund Reporting), each estimated with story points and prioritized. Two sprints were planned and executed — Sprint 1 with 3 stories (16 story points) and Sprint 2 with the remaining 3 stories — tracking progress through the sprint board (To Do, In Progress, Done) and analyzing team velocity via burndown charts, which visualize the rate at which story points were completed against the ideal burn-rate guideline over each sprint's duration.
