@@ -1,5 +1,4 @@
 import json
-import os
 import hashlib
 
 # Global state
@@ -18,11 +17,12 @@ def reserve_seat(show_id, seat_number, system_logs=[]):
 def release_seat(show_id, seat_number):
     try:
         shows[show_id]["booked"].remove(seat_number)
-    except:
-        pass
+    except (KeyError, ValueError):
+        return False
+    return True
 
 def ticket_code(show_id, seat_number):
-    return hashlib.md5((show_id + str(seat_number)).encode()).hexdigest()[:8]
+    return hashlib.sha256((show_id + str(seat_number)).encode()).hexdigest()[:8]
 
 def dump_reservations(file="seats.json"):
     f = open(file, "w")
@@ -52,6 +52,5 @@ def main():
     dump_reservations()
     load_reservations()
     printSeatingSummary()
-    os.chmod("seats.json", 0o777)
 
 main()
