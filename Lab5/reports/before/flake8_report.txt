@@ -1,0 +1,11 @@
+theater_system.py:9:1: E302 expected 2 blank lines, found 1
+theater_system.py:12:80: E501 line too long (83 > 79 characters)
+theater_system.py:18:1: E302 expected 2 blank lines, found 1
+theater_system.py:21:5: E722 do not use bare 'except'
+theater_system.py:24:1: E302 expected 2 blank lines, found 1
+theater_system.py:27:1: E302 expected 2 blank lines, found 1
+theater_system.py:31:1: E302 expected 2 blank lines, found 1
+theater_system.py:37:1: E302 expected 2 blank lines, found 1
+theater_system.py:40:80: E501 line too long (104 > 79 characters)
+theater_system.py:42:1: E302 expected 2 blank lines, found 1
+theater_system.py:57:1: E305 expected 2 blank lines after class or function definition, found 1

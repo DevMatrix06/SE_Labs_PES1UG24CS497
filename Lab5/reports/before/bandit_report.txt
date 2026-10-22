@@ -1,0 +1,57 @@
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.10.8
+Run started:2026-10-22 05:49:18.718769+00:00
+
+Test results:
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b110_try_except_pass.html
+   Location: .\theater_system.py:21:4
+20	        shows[show_id]["booked"].remove(seat_number)
+21	    except:
+22	        pass
+23	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b324_hashlib.html
+   Location: .\theater_system.py:25:11
+24	def ticket_code(show_id, seat_number):
+25	    return hashlib.md5((show_id + str(seat_number)).encode()).hexdigest()[:8]
+26	
+
+--------------------------------------------------
+>> Issue: [B103:set_bad_file_permissions] Chmod setting a permissive mask 0o777 on file (seats.json).
+   Severity: High   Confidence: High
+   CWE: CWE-732 (https://cwe.mitre.org/data/definitions/732.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b103_set_bad_file_permissions.html
+   Location: .\theater_system.py:55:4
+54	    printSeatingSummary()
+55	    os.chmod("seats.json", 0o777)
+56	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 47
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 1
+		Medium: 0
+		High: 2
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 3
+Files skipped (0):

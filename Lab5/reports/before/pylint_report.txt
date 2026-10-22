@@ -1,0 +1,24 @@
+************* Module theater_system
+theater_system.py:40:0: C0301: Line too long (104/100) (line-too-long)
+theater_system.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+theater_system.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
+theater_system.py:9:0: W0102: Dangerous default value [] as argument (dangerous-default-value)
+theater_system.py:12:27: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+theater_system.py:15:23: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+theater_system.py:18:0: C0116: Missing function or method docstring (missing-function-docstring)
+theater_system.py:21:4: W0702: No exception type(s) specified (bare-except)
+theater_system.py:24:0: C0116: Missing function or method docstring (missing-function-docstring)
+theater_system.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+theater_system.py:28:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+theater_system.py:28:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+theater_system.py:31:0: C0116: Missing function or method docstring (missing-function-docstring)
+theater_system.py:32:4: W0603: Using the global statement (global-statement)
+theater_system.py:33:8: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+theater_system.py:33:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+theater_system.py:37:0: C0116: Missing function or method docstring (missing-function-docstring)
+theater_system.py:37:0: C0103: Function name "printSeatingSummary" doesn't conform to snake_case naming style (invalid-name)
+theater_system.py:42:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 5.87/10
+
