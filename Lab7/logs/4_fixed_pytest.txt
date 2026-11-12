@@ -1,0 +1,18 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.8, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\tejas\AppData\Local\Programs\Python\Python310\python.exe
+hypothesis profile 'default'
+rootdir: D:\BTECH FILES\Sem 5\SE\Lab7
+plugins: anyio-4.12.1, hypothesis-6.168.5
+collecting ... collected 9 items
+
+test_processor.py::test_verify_isbn10_format_no_crash PASSED             [ 11%]
+test_processor.py::test_calculate_depreciation_factor_safe PASSED        [ 22%]
+test_processor.py::test_lookup_condition_multiplier_safe PASSED          [ 33%]
+test_processor.py::test_non_string_input_does_not_crash PASSED           [ 44%]
+test_processor.py::test_well_formed_isbn_is_accepted PASSED              [ 55%]
+test_processor.py::test_depreciation_factor_stays_in_range PASSED        [ 66%]
+test_processor.py::test_depreciation_rejects_nan_and_inf PASSED          [ 77%]
+test_processor.py::test_known_conditions_are_found_regardless_of_case_and_spaces PASSED [ 88%]
+test_processor.py::test_division_by_zero_lifespan PASSED                 [100%]
+
+============================== 9 passed in 2.39s ==============================

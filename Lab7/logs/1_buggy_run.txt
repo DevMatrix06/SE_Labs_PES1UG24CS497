@@ -1,0 +1,21 @@
+$ python processor.py
+==== Running verify_isbn10_format ====
+Enter ISBN-10 (e.g. 0-306-40615-2): Group 306: Starts 0, Checksum 2
+
+==== Running calculate_depreciation_factor ====
+Enter age/lifespan in years (e.g. 3/10): Depreciation Factor: 0.7
+
+==== Running lookup_condition_multiplier ====
+Enter condition (e.g. MINT, GOOD, POOR): Multiplier: 1.25
+
+--- second run, bad input ---
+$ python processor.py
+==== Running verify_isbn10_format ====
+Enter ISBN-10 (e.g. 0-306-40615-2): Traceback (most recent call last):
+  File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 40, in <module>
+    main()
+  File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 29, in main
+    print(verify_isbn10_format(isbn_in))
+  File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 3, in verify_isbn10_format
+    first_digit = int(cleaned[0])
+ValueError: invalid literal for int() with base 10: 'a'

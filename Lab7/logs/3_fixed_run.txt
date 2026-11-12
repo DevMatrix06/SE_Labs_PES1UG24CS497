@@ -1,0 +1,20 @@
+$ python processor.py
+==== Running verify_isbn10_format ====
+Enter ISBN-10 (e.g. 0-306-40615-2): Group 306: Starts 0, Checksum 2
+
+==== Running calculate_depreciation_factor ====
+Enter age/lifespan in years (e.g. 3/10): Depreciation Factor: 0.7
+
+==== Running lookup_condition_multiplier ====
+Enter condition (e.g. MINT, GOOD, POOR): Multiplier: 1.25
+
+--- second run, bad input ---
+$ python processor.py
+==== Running verify_isbn10_format ====
+Enter ISBN-10 (e.g. 0-306-40615-2): Invalid ISBN-10 format.
+
+==== Running calculate_depreciation_factor ====
+Enter age/lifespan in years (e.g. 3/10): Invalid input. Use the form age/lifespan with a positive lifespan, e.g. 3/10.
+
+==== Running lookup_condition_multiplier ====
+Enter condition (e.g. MINT, GOOD, POOR): Unknown condition. Choose from: MINT, LIKE_NEW, VERY_GOOD, GOOD, POOR

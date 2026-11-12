@@ -1,0 +1,278 @@
+============================= test session starts =============================
+platform win32 -- Python 3.10.8, pytest-9.1.1, pluggy-1.6.0
+rootdir: D:\BTECH FILES\Sem 5\SE\Lab7\buggy
+plugins: anyio-4.12.1, hypothesis-6.168.5
+collected 9 items
+
+test_processor.py FFFF..F.F                                              [100%]
+
+================================== FAILURES ===================================
+_____________________ test_verify_isbn10_format_no_crash ______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 17, in test_verify_isbn10_format_no_crash
+  |     def test_verify_isbn10_format_no_crash(s):
+  |   File "C:\Users\tejas\AppData\Local\Programs\Python\Python310\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.ExceptionGroup: Hypothesis found 4 distinct failures. (4 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 19, in test_verify_isbn10_format_no_crash
+    |     verify_isbn10_format(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 3, in verify_isbn10_format
+    |     first_digit = int(cleaned[0])
+    | ValueError: invalid literal for int() with base 10: ':'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 21, in test_verify_isbn10_format_no_crash
+    |     assert False, f"verify_isbn10_format crashed with: {e!r} on input {s!r}"
+    | AssertionError: verify_isbn10_format crashed with: ValueError("invalid literal for int() with base 10: ':'") on input ':'
+    | assert False
+    | Failing test case: test_verify_isbn10_format_no_crash(
+    |     s=':',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py:20
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 19, in test_verify_isbn10_format_no_crash
+    |     verify_isbn10_format(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 5, in verify_isbn10_format
+    |     check_char = cleaned[9].upper()
+    | IndexError: string index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 21, in test_verify_isbn10_format_no_crash
+    |     assert False, f"verify_isbn10_format crashed with: {e!r} on input {s!r}"
+    | AssertionError: verify_isbn10_format crashed with: IndexError('string index out of range') on input '0'
+    | assert False
+    | Failing test case: test_verify_isbn10_format_no_crash(
+    |     s='0',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py:20
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 19, in test_verify_isbn10_format_no_crash
+    |     verify_isbn10_format(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 3, in verify_isbn10_format
+    |     first_digit = int(cleaned[0])
+    | IndexError: string index out of range
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 21, in test_verify_isbn10_format_no_crash
+    |     assert False, f"verify_isbn10_format crashed with: {e!r} on input {s!r}"
+    | AssertionError: verify_isbn10_format crashed with: IndexError('string index out of range') on input ''
+    | assert False
+    | Failing test case: test_verify_isbn10_format_no_crash(
+    |     s='',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py:20
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 19, in test_verify_isbn10_format_no_crash
+    |     verify_isbn10_format(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 2, in verify_isbn10_format
+    |     cleaned = isbn_str.replace('-', '').strip()
+    | AttributeError: 'NoneType' object has no attribute 'replace'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 21, in test_verify_isbn10_format_no_crash
+    |     assert False, f"verify_isbn10_format crashed with: {e!r} on input {s!r}"
+    | AssertionError: verify_isbn10_format crashed with: AttributeError("'NoneType' object has no attribute 'replace'") on input None
+    | assert False
+    | Failing test case: test_verify_isbn10_format_no_crash(
+    |     s=None,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py:20
+    +------------------------------------
+___________________ test_calculate_depreciation_factor_safe ___________________
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 25, in test_calculate_depreciation_factor_safe
+  |     def test_calculate_depreciation_factor_safe(s):
+  |   File "C:\Users\tejas\AppData\Local\Programs\Python\Python310\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 27, in test_calculate_depreciation_factor_safe
+    |     calculate_depreciation_factor(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 10, in calculate_depreciation_factor
+    |     age = float(age_str)
+    | ValueError: could not convert string to float: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 29, in test_calculate_depreciation_factor_safe
+    |     assert False, f"calculate_depreciation_factor crashed with: {e!r} on input {s!r}"
+    | AssertionError: calculate_depreciation_factor crashed with: ValueError("could not convert string to float: ''") on input '/'
+    | assert False
+    | Failing test case: test_calculate_depreciation_factor_safe(
+    |     s='/',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 27, in test_calculate_depreciation_factor_safe
+    |     calculate_depreciation_factor(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 9, in calculate_depreciation_factor
+    |     age_str, life_str = book_age_str.split('/')
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 29, in test_calculate_depreciation_factor_safe
+    |     assert False, f"calculate_depreciation_factor crashed with: {e!r} on input {s!r}"
+    | AssertionError: calculate_depreciation_factor crashed with: ValueError('not enough values to unpack (expected 2, got 1)') on input ''
+    | assert False
+    | Failing test case: test_calculate_depreciation_factor_safe(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 27, in test_calculate_depreciation_factor_safe
+    |     calculate_depreciation_factor(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 9, in calculate_depreciation_factor
+    |     age_str, life_str = book_age_str.split('/')
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 29, in test_calculate_depreciation_factor_safe
+    |     assert False, f"calculate_depreciation_factor crashed with: {e!r} on input {s!r}"
+    | AssertionError: calculate_depreciation_factor crashed with: AttributeError("'NoneType' object has no attribute 'split'") on input None
+    | assert False
+    | Failing test case: test_calculate_depreciation_factor_safe(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+____________________ test_lookup_condition_multiplier_safe ____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 33, in test_lookup_condition_multiplier_safe
+  |     def test_lookup_condition_multiplier_safe(s):
+  |   File "C:\Users\tejas\AppData\Local\Programs\Python\Python310\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 35, in test_lookup_condition_multiplier_safe
+    |     lookup_condition_multiplier(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 24, in lookup_condition_multiplier
+    |     return multipliers[grade]
+    | KeyError: ''
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 37, in test_lookup_condition_multiplier_safe
+    |     assert False, f"lookup_condition_multiplier crashed with: {e!r} on input {s!r}"
+    | AssertionError: lookup_condition_multiplier crashed with: KeyError('') on input ''
+    | assert False
+    | Failing test case: test_lookup_condition_multiplier_safe(
+    |     s='',
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py:36
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 35, in test_lookup_condition_multiplier_safe
+    |     lookup_condition_multiplier(s)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 16, in lookup_condition_multiplier
+    |     grade = condition_code.strip().upper()
+    | AttributeError: 'NoneType' object has no attribute 'strip'
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 37, in test_lookup_condition_multiplier_safe
+    |     assert False, f"lookup_condition_multiplier crashed with: {e!r} on input {s!r}"
+    | AssertionError: lookup_condition_multiplier crashed with: AttributeError("'NoneType' object has no attribute 'strip'") on input None
+    | assert False
+    | Failing test case: test_lookup_condition_multiplier_safe(
+    |     s=None,  # or any other generated value
+    | )
+    | Explanation:
+    |     These lines were always and only run by failing test cases:
+    |         D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py:36
+    +------------------------------------
+____________________ test_non_string_input_does_not_crash _____________________
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 47, in test_non_string_input_does_not_crash
+  |     def test_non_string_input_does_not_crash(x):
+  |   File "C:\Users\tejas\AppData\Local\Programs\Python\Python310\lib\site-packages\hypothesis\core.py", line 2295, in wrapped_test
+  |     raise the_error_hypothesis_found
+  | exceptiongroup.ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 48, in test_non_string_input_does_not_crash
+    |     verify_isbn10_format(x)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 2, in verify_isbn10_format
+    |     cleaned = isbn_str.replace('-', '').strip()
+    | TypeError: a bytes-like object is required, not 'str'
+    | Failing test case: test_non_string_input_does_not_crash(
+    |     x=b'',  # or any other generated value
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\test_processor.py", line 48, in test_non_string_input_does_not_crash
+    |     verify_isbn10_format(x)
+    |   File "D:\BTECH FILES\Sem 5\SE\Lab7\buggy\processor.py", line 2, in verify_isbn10_format
+    |     cleaned = isbn_str.replace('-', '').strip()
+    | AttributeError: 'int' object has no attribute 'replace'
+    | Failing test case: test_non_string_input_does_not_crash(
+    |     x=0,  # or any other generated value
+    | )
+    +------------------------------------
+____________________ test_depreciation_rejects_nan_and_inf ____________________
+
+    def test_depreciation_rejects_nan_and_inf():
+        for bad in ("nan", "inf", "-inf"):
+            result = calculate_depreciation_factor(f"{bad}/10")
+>           assert result is None or math.isfinite(result)
+E           assert (inf is None or False)
+E            +  where False = <built-in function isfinite>(inf)
+E            +    where <built-in function isfinite> = math.isfinite
+
+test_processor.py:73: AssertionError
+_______________________ test_division_by_zero_lifespan ________________________
+
+    def test_division_by_zero_lifespan():
+>       assert calculate_depreciation_factor("3/0") is None
+
+test_processor.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+book_age_str = '3/0'
+
+    def calculate_depreciation_factor(book_age_str):
+        age_str, life_str = book_age_str.split('/')
+        age = float(age_str)
+        life = float(life_str)
+>       depreciation = 1.0 - (age / life)
+E       ZeroDivisionError: float division by zero
+
+processor.py:12: ZeroDivisionError
+=========================== short test summary info ===========================
+FAILED test_processor.py::test_verify_isbn10_format_no_crash - exceptiongroup...
+FAILED test_processor.py::test_calculate_depreciation_factor_safe - exception...
+FAILED test_processor.py::test_lookup_condition_multiplier_safe - exceptiongr...
+FAILED test_processor.py::test_non_string_input_does_not_crash - exceptiongro...
+FAILED test_processor.py::test_depreciation_rejects_nan_and_inf - assert (inf...
+FAILED test_processor.py::test_division_by_zero_lifespan - ZeroDivisionError:...
+========================= 6 failed, 3 passed in 7.99s =========================
